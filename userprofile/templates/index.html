@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block title %} <h1>AVE MARIA!</h1> {% endblock %}
+
+{% block content %}
+<h1>User List</h1>
+	{% if user_list %} 
+
+	<ul>
+
+      {% for profile in user_list %}
+      <li>
+        <a href="{{ profile.get_absolute_url }}">{{ profile.user.username }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    
+    {% else %}
+      <p> =( </p>
+    {% endif %}   
+
+{% endblock %}

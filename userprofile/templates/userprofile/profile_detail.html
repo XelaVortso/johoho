@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+  <h1>Title: {{ profile.user.username }}</h1>
+
+  <p><strong>FirstName:</strong> {{ profile.user.first_name }}</p> <!-- author detail link not yet defined -->
+  <p><strong>LastName:</strong> {{ profile.user.last_name}}</p>
+  <p><strong>BirtDay:</strong> {{ profile.birtday }}</p> 
+  <p><strong>Email:</strong> {{ profile.user.email }}</p>  
+  <p><strong>LoginDate:</strong> {{ profile.user.date_joined }}</p>    
+
+
+{% endblock %}
